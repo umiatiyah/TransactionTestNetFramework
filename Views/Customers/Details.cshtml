@@ -1,0 +1,66 @@
+﻿@model TransactionTestWithNetFramework.Response.CustomerResponse
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NIK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIK)
+        </dd>
+
+        <dt>
+            Customer Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            Customer Type
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerType)
+        </dd>
+
+        <dt>
+            No Telp
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoTelp)
+        </dd>
+
+        <dt>
+            Customer Address
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            No Rekening
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoRekening)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

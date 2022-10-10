@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionTestWithNetFramework", "TransactionTestWithNetFramework.csproj", "{287E2586-A2A5-4578-8088-D9C8E0B77A9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{287E2586-A2A5-4578-8088-D9C8E0B77A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287E2586-A2A5-4578-8088-D9C8E0B77A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287E2586-A2A5-4578-8088-D9C8E0B77A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287E2586-A2A5-4578-8088-D9C8E0B77A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BCA1801-4CD9-43A6-9DEA-81368D27BED5}
+	EndGlobalSection
+EndGlobal
