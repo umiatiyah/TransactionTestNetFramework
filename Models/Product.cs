@@ -2,7 +2,7 @@
 
 namespace TransactionTestWithNetFramework.Models
 {
-    public class Product
+    public class Products
     {
         public int ID { get; set; }
         [Column("product_name")]

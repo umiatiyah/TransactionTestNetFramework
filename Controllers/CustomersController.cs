@@ -50,7 +50,7 @@ namespace TransactionTestWithNetFramework.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = await db.Customers.FindAsync(id);
+            Customers customer = await db.Customers.FindAsync(id);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -80,7 +80,7 @@ namespace TransactionTestWithNetFramework.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ID,NIK,CustomerName,CustomerType,NoTelp,Address,NoRekening")] Customer customer)
+        public async Task<ActionResult> Create([Bind(Include = "ID,NIK,CustomerName,CustomerType,NoTelp,Address,NoRekening")] Customers customer)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +99,7 @@ namespace TransactionTestWithNetFramework.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = await db.Customers.FindAsync(id);
+            Customers customer = await db.Customers.FindAsync(id);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -113,7 +113,7 @@ namespace TransactionTestWithNetFramework.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ID,NIK,CustomerName,CustomerType,NoTelp,Address,NoRekening")] Customer customer)
+        public async Task<ActionResult> Edit([Bind(Include = "ID,NIK,CustomerName,CustomerType,NoTelp,Address,NoRekening")] Customers customer)
         {
             if (ModelState.IsValid)
             {
@@ -131,7 +131,7 @@ namespace TransactionTestWithNetFramework.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = await db.Customers.FindAsync(id);
+            Customers customer = await db.Customers.FindAsync(id);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -154,7 +154,7 @@ namespace TransactionTestWithNetFramework.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Customer customer = await db.Customers.FindAsync(id);
+            Customers customer = await db.Customers.FindAsync(id);
             db.Customers.Remove(customer);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

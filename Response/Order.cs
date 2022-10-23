@@ -13,7 +13,7 @@ namespace TransactionTestWithNetFramework.Response
     }
 
     [NotMapped]
-    public class OrderResponse : Order
+    public class OrderResponse : Orders
     {
         public string CustomerName { get; set; }
         public string CustomerType { get; set; }

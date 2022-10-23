@@ -1,11 +1,11 @@
 USE [TransactionTest]
 GO
-/****** Object:  Table [dbo].[customer]    Script Date: 10/10/2022 8:56:23 PM ******/
+/****** Object:  Table [dbo].[customer]    Script Date: 10/23/2022 10:56:02 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[customer](
+CREATE TABLE [dbo].[customers](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[nik] [varchar](20) NOT NULL,
 	[customer_name] [varchar](100) NOT NULL,
@@ -23,12 +23,12 @@ UNIQUE NONCLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[master]    Script Date: 10/10/2022 8:56:23 PM ******/
+/****** Object:  Table [dbo].[masters]    Script Date: 10/23/2022 10:56:02 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[master](
+CREATE TABLE [dbo].[masters](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[master_name] [varchar](100) NOT NULL,
 	[code] [varchar](10) NULL,
@@ -40,12 +40,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[order]    Script Date: 10/10/2022 8:56:23 PM ******/
+/****** Object:  Table [dbo].[orders]    Script Date: 10/23/2022 10:56:02 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[order](
+CREATE TABLE [dbo].[orders](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[customer_id] [int] NOT NULL,
 	[order_number] [varchar](10) NOT NULL,
@@ -62,12 +62,12 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[product]    Script Date: 10/10/2022 8:56:23 PM ******/
+/****** Object:  Table [dbo].[products]    Script Date: 10/23/2022 10:56:02 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[product](
+CREATE TABLE [dbo].[products](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[product_name] [varchar](100) NOT NULL,
 	[unit] [int] NOT NULL,

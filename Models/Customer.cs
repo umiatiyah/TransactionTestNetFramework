@@ -2,7 +2,7 @@
 
 namespace TransactionTestWithNetFramework.Models
 {
-    public class Customer
+    public class Customers
     {
         public int ID { get; set; }
         public string NIK { get; set; }

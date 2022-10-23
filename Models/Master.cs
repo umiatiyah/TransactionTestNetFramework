@@ -6,7 +6,7 @@ using System.Web;
 
 namespace TransactionTestWithNetFramework.Models
 {
-    public class Master
+    public class Masters
     {
         public int ID { get; set; }
         [Column("master_name")]

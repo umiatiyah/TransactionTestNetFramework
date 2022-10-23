@@ -46,7 +46,7 @@ namespace TransactionTestWithNetFramework.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = await db.Products.FindAsync(id);
+            Products product = await db.Products.FindAsync(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -74,7 +74,7 @@ namespace TransactionTestWithNetFramework.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ID,ProductName,Unit,Stock,Price")] Product product)
+        public async Task<ActionResult> Create([Bind(Include = "ID,ProductName,Unit,Stock,Price")] Products product)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,7 @@ namespace TransactionTestWithNetFramework.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = await db.Products.FindAsync(id);
+            Products product = await db.Products.FindAsync(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -107,7 +107,7 @@ namespace TransactionTestWithNetFramework.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ID,ProductName,Unit,Stock,Price")] Product product)
+        public async Task<ActionResult> Edit([Bind(Include = "ID,ProductName,Unit,Stock,Price")] Products product)
         {
             Console.WriteLine(product.ID);
             if (ModelState.IsValid)
@@ -126,7 +126,7 @@ namespace TransactionTestWithNetFramework.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = await db.Products.FindAsync(id);
+            Products product = await db.Products.FindAsync(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -147,7 +147,7 @@ namespace TransactionTestWithNetFramework.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Product product = await db.Products.FindAsync(id);
+            Products product = await db.Products.FindAsync(id);
             db.Products.Remove(product);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

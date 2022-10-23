@@ -18,7 +18,7 @@ namespace TransactionTestWithNetFramework.Controllers
         private TransactionContext db = new TransactionContext();
         // GET: api/MasterData
         [HttpGet]
-        public async Task<List<Master>> Master()
+        public async Task<List<Masters>> Master()
         {
             var masterProducts = await db.Masters.ToListAsync();
             return masterProducts;

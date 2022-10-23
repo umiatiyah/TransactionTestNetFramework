@@ -84,7 +84,7 @@ namespace TransactionTestWithNetFramework.Controllers
 
         // POST: Orders/Create
         [System.Web.Http.HttpPost]
-        public async Task<Common> CreateOrder([FromBody] Order order)
+        public async Task<Common> CreateOrder([FromBody] Orders order)
         {
             var res = new Common();
             try
